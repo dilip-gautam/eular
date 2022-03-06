@@ -11,7 +11,6 @@ func factorial(n int) *big.Int {
     return f
 }
 func main() {
-    // n = 20; (2 * n)! / (n!)^2
     n := 20
     a := factorial(2  * n)
     b := factorial(n)

@@ -5,8 +5,7 @@ import (
 )
 
 func main() {
-	var n int
-	fmt.Scanf("%d", &n)
+	n := 600851475143
 	var max int
 
 	if n%2 == 0 {

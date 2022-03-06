@@ -1,30 +1,18 @@
 package main
 
-import (
-	"fmt"
-	"math"
-)
+import "fmt"
 
-func isPrime(n int) bool {
-	if n < 2 {
-		return false
-	}
-	prime := true
-	max := int(math.Sqrt(float64(n)))
-	for i := 2; i <= max; i++ {
-		if n%i == 0 {
-			prime = false
-			break
-		}
-	}
-	return prime
-}
 func main() {
-	sum := 0
-	for i := 2; i <= 2000000; i++ {
-		if isPrime(i) {
-			sum += i
+out:
+	for a := 1; a < 1_000; a++ {
+		for b := 1; b < 1_000; b++ {
+			for c := 1; c < 1_000; c++ {
+				if ((a*a)+(b*b) == (c * c)) && (a+b+c == 1000) && ((a < b) && (b < c)) {
+					product := a * b * c
+					fmt.Println(product)
+					break out
+				}
+			}
 		}
 	}
-	fmt.Println(sum)
 }
